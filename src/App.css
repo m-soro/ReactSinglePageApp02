@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+p,
+ul,
+li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+.ProjectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.5em;
+}
+
+.ProjectCard {
+  width: 500px;
+  height: auto;
+}
+
+.StackBox > button {
+  margin-top: 1em;
+  width: 6.5em;
+  padding: 15px;
+}
+
+.ProjectDetails > p {
+  margin-top: 30px;
+}
+
+.Header .active {
+  color: aqua;
+}
+
+details summary::after {
+  transform: rotate(0);
+}
+
+details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  --swiper-navigation-size: 20px;
+}
+.NameText {
+  font-family: "Slabo 27px", serif;
+  font-size: 1.3em;
+}
+
+nav ul li:active {
+  background-color: none;
+}
+
+.EachJob {
+  margin-top: 3.5em;
+}
+
+.EachJob > p {
+  margin-bottom: -2px;
+}
+
+.EachJob > ul {
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+  padding-left: 2.5em;
+}
+
+.EachJob > ul > li {
+  margin-bottom: -20px;
+}
+
+.ExperienceText {
+  margin-bottom: -50px;
+}
+
+.Resume > section {
+  margin-bottom: -5px;
+}
+
+.TechSkills {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .ProjectCard {
+    width: 95%;
+  }
+
+  .TechSkills {
+    justify-content: left;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+}
