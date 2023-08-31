@@ -4,6 +4,7 @@ import Projects from "/src/pages/Projects";
 import About from "/src/pages/About";
 import Resume from "/src/pages/Resume";
 import Contact from "/src/pages/Contact";
+import Project from "/src/pages/Project";
 
 export default function Header() {
   return (
@@ -12,8 +13,8 @@ export default function Header() {
         <nav>
           <ul>
             <li className="NameText">
-              <NavLink to="/" end>
-                Mark Soro
+              <NavLink to="/home" end>
+                mark_
               </NavLink>
             </li>
           </ul>
@@ -37,7 +38,7 @@ export default function Header() {
                     <NavLink to="/contact">Contact</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/home">Home</NavLink>
                   </li>
                 </ul>
               </details>
@@ -45,8 +46,9 @@ export default function Header() {
           </ul>
         </nav>
         <Routes>
-          <Route exact strict path="/" element={<Home />} />
+          <Route exact strict path="/home" element={<Home />} />
           <Route exact strict path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<Project />} />
           <Route exact strict path="/about" element={<About />} />
           <Route exact strict path="/resume" element={<Resume />} />
           <Route exact strict path="/contact" element={<Contact />} />

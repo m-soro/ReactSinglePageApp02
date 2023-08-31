@@ -13,8 +13,8 @@ export const ResumeData = {
   ],
   education: [
     {
-      field: "Software Engineering Certification Program",
-      institution: "Bachelor of Science Hospitality Management",
+      field: "Software Engineering Certificate Program",
+      institution: "Per Scholas, 2023",
     },
     {
       field: "Cybersecurity System Administration Certificate",

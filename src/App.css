@@ -1,26 +1,50 @@
+/***===== RESET STYLE =====***/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.App,
+/***===== ABOUT PAGE =====***/
+/***===== CONTACT PAGE =====***/
+/***===== HOME PAGE =====***/
+
+/***===== GLOBAL STYLE =====***/
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Merriweather", sans-serif;
   font-weight: 400;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 0;
 }
 
 p,
 ul,
-li {
+li,
+.StackBox > button {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
+  --font-size: 16px;
 }
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  --swiper-navigation-size: 20px;
+}
+
+/***===== END GLOBAL STYLE =====***/
+
+/***===== PROJECT*S* PAGE =====***/
 .ProjectContainer {
   display: flex;
   flex-wrap: wrap;
@@ -43,8 +67,22 @@ li {
   margin-top: 30px;
 }
 
+/***===== END PROJECT*S* PAGE =====***/
+
+/***===== HEADER =====***/
 .Header .active {
   color: aqua;
+}
+
+.NameText {
+  font-family: "Zilla Slab", serif;
+  font-size: 2.3em;
+  font-weight: 900;
+  font-style: italic;
+}
+
+nav {
+  height: 8em;
 }
 
 details summary::after {
@@ -54,29 +92,39 @@ details summary::after {
 details[open] > summary::after {
   transform: rotate(180deg);
 }
+/***===== END HEADER =====***/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0;
+/***===== PROJECT PAGE =====***/
+.ProjectDetail > article > section > ul {
+  padding-left: 2em;
 }
 
-swiper-container::part(button-prev),
-swiper-container::part(button-next) {
-  --swiper-navigation-size: 20px;
-}
-.NameText {
-  font-family: "Slabo 27px", serif;
-  font-size: 1.3em;
+.ProjectDetail > article > section > ul > li {
+  padding-left: 0.5em;
 }
 
-nav ul li:active {
-  background-color: none;
+.RepoLink {
+  width: 4.5em;
 }
 
+.BackToProjects {
+  font-size: 1.5em;
+  padding: 0;
+  margin: 0;
+  width: 1.8em;
+  height: 1.8em;
+  transform: rotate(270deg);
+}
+
+.ProjectNavButtons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+/***===== END PROJECT PAGE =====***/
+
+/***===== RESUME PAGE =====***/
 .EachJob {
   margin-top: 3.5em;
 }
@@ -110,6 +158,7 @@ nav ul li:active {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+/***===== END RESUME PAGE =====***/
 
 @media screen and (max-width: 600px) {
   .ProjectCard {
@@ -118,9 +167,5 @@ nav ul li:active {
 
   .TechSkills {
     justify-content: left;
-  }
-
-  h2 {
-    font-size: 23px;
   }
 }

@@ -9,7 +9,6 @@ export default function Resume() {
       </section>
       <h4>Profile</h4>
       <p className="ProfileText">{ResumeData.profile}</p>
-
       <section>
         <h4>Tech Skills</h4>
         <div className="TechSkills">
@@ -18,7 +17,6 @@ export default function Resume() {
           ))}
         </div>
       </section>
-
       <section>
         <h4 className="ExperienceText">Experience</h4>
         {ResumeData.workExp.map((info, index) => (
@@ -36,8 +34,9 @@ export default function Resume() {
           </section>
         ))}
       </section>
-
       <section className="Education">
+        <h4>Education</h4>
+        <br />
         {ResumeData.education.map((info, index) => (
           <hgroup key={index}>
             <h5>{info.field}</h5>
@@ -46,6 +45,7 @@ export default function Resume() {
           </hgroup>
         ))}
       </section>
+      <br />
       <section>
         <h5>Language</h5>
         <p>{ResumeData.languange}</p>

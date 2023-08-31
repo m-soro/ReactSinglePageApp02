@@ -1,4 +1,5 @@
 import { ProjectData } from "/src/assets/myFiles/ProjectData.jsx";
+import { Link } from "react-router-dom";
 import { register } from "swiper/element/bundle";
 register();
 
@@ -10,8 +11,10 @@ export default function Projects() {
       <div className="ProjectContainer">
         {ProjectData.map((project) => (
           <article className="ProjectCard" key={project.id}>
-            <header>{project.projectName}</header>
-            <div className="ProjectBody">
+            <header>
+              <h4>{project.projectName}</h4>
+            </header>
+            <div className="container-fluid">
               <swiper-container
                 slides-per-view="1"
                 loop="true"
@@ -19,21 +22,23 @@ export default function Projects() {
                 navigation="true"
                 pagination="true"
               >
-                {project.body.images.map((image, index) => (
+                {project.images.map((image, index) => (
                   <swiper-slide key={index}>
                     <img src={image} alt={project.projectName} />
                   </swiper-slide>
                 ))}
               </swiper-container>
               <div className="ProjectDetails">
-                <p>{project.body.info}</p>
+                <p>{project.summary}</p>
               </div>
             </div>
             <footer className="StackBox">
-              <div className="RepoInfoDiv">{project.footer}</div>
+              <div className="RepoInfoDiv">
+                <h6>{project.stack}</h6>
+              </div>
 
               <button className="outline">
-                <a href="#">Repo Link</a>{" "}
+                <Link to={`/projects/${project.id}`}>more info</Link>
               </button>
             </footer>
           </article>
